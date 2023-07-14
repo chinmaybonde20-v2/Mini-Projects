@@ -1,0 +1,19 @@
+
+.completed-task-container {
+    padding: 20px;
+  }
+  
+  .completed-task-cards-container .card {
+    margin-bottom: 10px;
+    width: 310px;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 5px;
+  }
+
+  .login-text{
+    margin-top: 50px;
+   text-align: center;
+  }

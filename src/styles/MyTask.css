@@ -1,0 +1,106 @@
+
+.task-container {
+    padding: 20px;
+  }
+  
+  .task-header {
+    margin-bottom: 20px;
+  }
+  
+  .task-form-container {
+    margin-bottom: 20px;
+  }
+  
+  .task-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .invalid-feedback {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .task-cards-container .card {
+    margin-bottom: 10px;
+    width: 300px;
+
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .days-left {
+    color: red;
+  }
+  .login-text{
+    margin-top: 50px;
+   text-align: center;
+  }
+
+  .task-list {
+    padding: 30px;
+    margin: 10px;
+    border: 1px solid;
+  }
+  .completed-task {
+    padding: 30px;
+    margin: 30px;
+    border: 1px solid;
+    border-color: green;
+  }
+  .card-per-page{
+    margin-left: 10px;
+  }
+  .pagination-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #d4d2d2;
+    border-radius: 4px;
+  }
+  .pagination-btn button {
+    margin-right: 10px;
+  }
+  .task-per-page-links .card-per-page {
+    margin-left: 10px;
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-per-page-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-per-page-links p {
+    margin-right: 10px;
+  }
+  .page-of{
+    margin: 10px;
+  }
+  .card-per-page {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .card-per-page.active {
+    background-color: #337ab7;
+    color: #fff;
+  }
+
+  
