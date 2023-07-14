@@ -1,0 +1,31 @@
+.row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sidebar-tab {
+    background-color: rgb(214, 210, 210);
+    width: 20%;
+    height: 100vh;
+  }
+  
+  .main-body {
+    background-color: rgb(142, 156, 231);
+    width: 80%;
+    height: 100vh;
+  }
+  
+  .tb {
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  .welcome-msg {
+    margin-left: 200px;
+    margin-top: 50px;
+  }

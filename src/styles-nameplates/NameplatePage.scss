@@ -1,0 +1,54 @@
+.nameplate-header{
+    text-align: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sidebar-tab {
+    background-color: rgb(214, 210, 210);
+    width: 20%;
+    height: 100vh;
+  }
+  
+  .main-body {
+    background-color: rgb(142, 156, 231);
+    width: 80%;
+    height: 100vh;
+  }
+  
+  .OwnerDetailsForm {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Owner card */
+  
+  .owner-card {
+    display: inline-table; 
+    background-color: rgb(56, 47, 138);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    height: 120px;
+    /* width: 120px; */
+    border-radius: 20px;
+    color: rgb(12, 12, 12);
+  }
+  
+  h1 {
+    margin: 10px;
+  }
+  .white {
+    color: white;
+  }
+  
+  .apartment-name{
+    color: rgb(128, 14, 14);
+  }
+
+  .nameplates-body{
+    margin: auto;
+  }

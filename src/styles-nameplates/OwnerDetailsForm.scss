@@ -1,0 +1,34 @@
+label {
+    display: block;
+  }
+  input {
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .error{
+    color: red;
+  }
+  .popin{
+    position: fixed;
+    background-color: rgb(171, 204, 171);
+    padding: 50px;
+    top: 100px;
+    background-clip: padding-box;
+    border-radius: 30px;
+    margin-left: 400px;
+    z-index: 1;
+  }
+  .Signupbtn{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .date{
+    width: 80%;
+    color: rgb(109, 106, 106);
+  }
+  
+  

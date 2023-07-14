@@ -1,0 +1,39 @@
+button {
+    background-color: rgb(144, 164, 228);
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.myform {
+    background-color: rgb(205, 199, 199);
+    padding: 40px;
+    width: 20%;
+    margin: auto;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+// Template style
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-tab {
+    background-color: rgb(214, 210, 210);
+    width: 20%;
+    height: 100vh;
+}
+
+.main-body {
+    background-color: rgb(142, 156, 231);
+    width: 80%;
+    height: 100vh;
+}
