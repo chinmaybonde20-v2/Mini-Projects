@@ -1,0 +1,218 @@
+### Create form
+
+- Reset form after entering data
+const submitForm = () => {
+  const open = false;
+  emits("closeForm", open);
+  const submittedDataobj = { name: name.value, age: age.value, city: city.value };
+  emits("subdataObj",submittedDataobj);
+  handleReset();
+};
+
+#### Open form
+
+- create var in @home
+(set by default value false to disappear form)
+const openForm = ref(false);
+
+- add var value == true in button @Home
+(Form will appear after value is true on clicking)
+<button @click="openForm=true">Open Form</button>
+
+- bind prop to myform @HOME
+(create var open and assign value == true)
+ <MyForm :open="openForm" />
+
+- define props in @FORM
+(use var open's true value in form so use props in form)
+defineProps<{open:boolean}>();
+
+- add v-show in form @FORM
+(open value is true by props so v-show=true)
+<div v-show="open" :validation-schema="schema" class="formdiv">
+
+_______________________________________________________________________________________
+
+## Submit and close form
+
+(now v-show=open so form is visible, if v-show=false, form will disable so create funstion to change open value to false, emit name -> closeForm and open is value whih we have to send)
+
+- create submit function @FORM
+const submitForm = () => {
+  const open = false;
+}
+
+- create emit @FORM
+const emits = defineEmits<{(e:'closeForm',open:boolean):void}>();
+
+- write emit name in submit function @FORM
+const submitForm = () => {
+  const open = false;
+  emits('closeForm',open);
+}
+
+-assign close form function to button
+(@emitname is close-form and we assigned a function to it )
+ <MyForm :open="openForm" @close-form="closeFormfunc" />
+
+-create functon @HOME
+(open:boolean) is used as we have to import it,  open value is false and assigned it to openForm.value so open will be false hence v-show=open=false=hide
+
+const closeFormfunc = (open:boolean) =>{
+  openForm.value = open
+}
+
+_______________________________________________________________________________________
+
+
+## Store data in array
+
+(create object for submmited data and emit it in home page to show it in array)
+
+-Create an object in submit funtion so submit will create an object
+
+const submitForm = () => {
+  const open = false;
+  emits("closeForm", open);
+ const submittedData = { name: name.value, age: age.value, city: city.value };
+};
+
+
+- create an emmit to send it in home page
+const emits = defineEmits<{ (e: "closeForm", open: boolean): void,(e:"subdataObj",submittedDataobj:object):void }>();
+
+
+- add emt name in function
+const submitForm = () => {
+  const open = false;
+  emits("closeForm", open);
+  const submittedDataobj = { name: name.value, age: age.value, city: city.value };
+  emits("subdataObj",submittedDataobj);
+};
+
+- create a array in @HOME
+const submittedDataarray = reactive([]);
+
+- write emmit name and function name in form tag comoponent
+<MyForm :open="openForm" @close-form="closeFormfunc" @subdata-obj="submitdatainArray" />
+
+- Create function to push data in array 
+const submitdatainArray = (submittedDataobj:object) => {
+  submittedDataarray.push(submittedDataobj);
+}
+here (submittedDataobj:object) object value which we are importing, .push(submittedDataobj); object value which need to save
+
+
+- Interpolation to show array
+<h4>{{submittedDataarray}}</h4>
+
+or use list for new line
+
+
+  <ul v-for="user in submittedDataarray" :key="user">
+    <li>
+      {{ user }}
+      <button>Edit</button>
+      <hr />
+    </li>
+  </ul>
+
+_______________________________________________________________________________________
+
+##Edit button click open form and close 
+(same as above step 1 and 2)
+
+_______________________________________________________________________________________
+
+## To show same data as input in form when click on edit button 
+
+- Creat a variable to store current user data
+const currentUserdata = ref([]); @HOME
+
+- Store userdataobject in above variable and then push variable in array so that single data will be store in tha variable
+
+const submitdatainArray = (submittedDataobj: object) => {
+  currentUserdata.value = submittedDataobj;
+  submittedDataarray.push(currentUserdata.value);
+};
+
+- Create prop name in @HOME editform component tag\
+ <EditableForm 
+    :openEditableFormprop ="openEditableform"
+    @close-editformemit="closeEditableformfunction"
+    :editsavedDataprop ="currentUserdata"
+    />
+
+- define prop in @Editform component 
+defineProps<{openEditableFormprop:boolean,editsavedDataprop:object}>();
+
+- In editform field, change v-model=name to v-model and prop
+<div>
+        <label for="name">Name:</label>
+        <input id="name" v-model="$props.editsavedDataprop.name" type="text" />
+        <p class="error">{{ errors.name }}</p>
+      </div>
+
+<input id="age" v-model="$props.editsavedDataprop.age" type="text" />
+<input id="city" v-model="$props.editsavedDataprop.city" type="text" />
+
+
+_______________________________________________________________________________________
+
+### To show user in card
+- Create a new component
+- Create view button
+
+____________
+(steps same as to show data in editable form)
+
+- Creat a variable to store current user data
+const currentUserdata = ref([]); @HOME
+
+- Store userdataobject in above variable and then push variable in array so that single data will be store in tha variable
+
+const submitdatainArray = (submittedDataobj: object) => {
+  currentUserdata.value = submittedDataobj;
+  submittedDataarray.push(currentUserdata.value);
+};
+
+- Create prop name in @HOME editform component tag\
+ <EditableForm 
+    :openEditableFormprop ="openEditableform"
+    @close-editformemit="closeEditableformfunction"
+    :editsavedDataprop ="currentUserdata"
+    />
+
+- define prop in @Editform component 
+defineProps<{openEditableFormprop:boolean,editsavedDataprop:object}>();
+_____________________
+
+- create new bind in viewuserdata prop
+ <ViewUser
+  :openUserformprop="openViewuser"
+  :viewUserdata="currentUserdata"
+  
+  />
+
+-define prop @Viewuser
+defineProps<{openUserformprop:boolean,viewUserdata:object}>();
+
+-use prop tp show data in interpolation
+
+<template>
+    <div v-show="openUserformprop">
+
+  <h3>Name:</h3>
+  <p>{{$props.viewUserdata.name}}</p><br>
+
+  <h3>Age:</h3>
+  <p>{{$props.viewUserdata.age}}</p><br>
+  
+  <h3>City:</h3>
+  <p>{{$props.viewUserdata.city}}</p>
+
+</div>
+</template>
+
+
+
