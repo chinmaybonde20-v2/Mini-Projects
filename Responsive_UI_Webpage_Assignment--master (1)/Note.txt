@@ -1,0 +1,5 @@
+- Added Desktop and Mobile view mockups of the Assignment. 
+- Necessary images are added in the "images" folder.
+- Complete the design via using HTML5 tags & Css3 properties.
+- UI should be responsive.
+- Use Google Fonts https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap

@@ -1,0 +1,13 @@
+/* Assignment4_ChinmayBonde_5600 */
+.div1 {
+width: 400px;
+height: 100px;
+background: linear-gradient(to bottom, white 50%, blue 50%);
+margin: auto;
+}
+
+.name1 {
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+}

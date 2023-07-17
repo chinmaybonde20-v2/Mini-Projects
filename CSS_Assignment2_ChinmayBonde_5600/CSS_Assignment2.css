@@ -1,0 +1,43 @@
+/* CSS_Assignment2_ChinmayBonde_5600 */
+
+/* Central Div */
+.maindivD {
+  width: 250px;
+  height: 250px;
+  background-color: red;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translatex(-50%, -50%);
+  margin: 50px;
+}
+
+div {
+  font-size: small; 
+}
+/* Upper */
+.dv1 {
+  writing-mode: horizontal-tb;
+  padding-top: 110px;
+  padding-left: 550px;
+}
+/* Left */
+.dv2 {
+  writing-mode: vertical-lr;
+  padding-top: 9px;
+  padding-left: 470px;
+}
+/* Bottom */
+.dv3 {
+  transform: rotateX(90%);
+  padding-top: 10px;
+  padding-left: 550px;
+}
+/* Right */
+.dv4 {
+  writing-mode: vertical-lr;
+  position: absolute;
+  padding-bottom: 6em;
+  padding-left: 62em;
+  bottom: 0;
+}

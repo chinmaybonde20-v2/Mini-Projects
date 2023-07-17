@@ -1,0 +1,182 @@
+body {
+
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+}
+
+
+.bkg {
+  background-color: white;
+  color: rgb(100, 98, 98);
+}
+
+.div1 {
+  width: 260px;
+  background: linear-gradient(to bottom, white 50%, rgb(138, 198, 236) 50%);
+  margin: auto;
+}
+
+.navbar-brand{
+  display: flex;
+  height: 10px;
+  padding: 16%;
+  align-items: center;
+}
+
+.navbar-nav{
+flex: 1;
+text-align: right;
+align-items: center;
+}
+
+
+.navbar .navbar-nav .nav-link {
+  color: #f83838fb;
+  font-size: 18px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #f83838fb;
+}
+
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #f83838fb;
+  width: 0%;
+  content: "";
+  height: 2px;
+  cursor: pointer;
+  /* transition: all 0.5s; */
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+
+/* slider */
+
+.slider_bold_text {
+  text-align: left;
+  padding-bottom: 65px;
+  /* margin-left: 520px; */
+
+}
+
+.btnsli1 {
+
+  padding-right: 30px;
+}
+
+.btnsli2 {
+  padding-left: 20px;
+
+
+}
+
+.sliderbutton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.taglinex {
+  color: rgb(79, 78, 78);
+}
+
+/* Portfolio */
+.portdiv {
+  /* width: 650px; */
+  margin: auto;
+}
+
+.btndiv {
+  margin: auto;
+  background-color: rgb(237, 237, 237);
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  /* width: 520px; */
+}
+
+.btndiv .btn-group {
+  color: #f83838fb;
+
+}
+
+.btndiv .btn-group:hover {
+  color: #f83838fb;
+}
+
+.btndiv .btn-group .btn {
+  position: relative;
+}
+
+.btndiv .btn-group .btn::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #f83838fb;
+  width: 0%;
+  content: "";
+  height: 2px;
+  cursor: pointer;
+  /* transition: all 0.5s; */
+}
+
+.btndiv .btn-group .btn:hover::after {
+  width: 100%;
+}
+
+.btnbord {
+  border-right: 5px solid red;
+
+}
+
+
+
+.copyrtext {
+  text-align: center;
+  padding-top: 21px;
+  /* padding: 20px; */
+  color: rgb(167, 167, 167);
+  font-size: 13px;
+}
+
+.footertextdeco {
+  text-decoration: none;
+  color: rgb(167, 167, 167);
+  font-size: 13px;
+  border-right: 1px solid rgb(167, 167, 167);
+  padding-right: 12px;
+
+}
+
+.footertextdecor {
+  text-decoration: none;
+  color: rgb(167, 167, 167);
+  font-size: 13px;
+
+}
+
+.footicon {
+  height: 20px;
+  width: 20px;
+  padding-top: 4px;
+  align-items: left;
+}
+
+.overlay {
+  position: absolute;
+}
+
+

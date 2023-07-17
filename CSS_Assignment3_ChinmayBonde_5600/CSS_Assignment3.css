@@ -1,0 +1,23 @@
+/* CSS_Assignment3_ChinmayBonde_5600 */
+
+div {
+    background-color: rgb(26, 26, 121);
+    height: 180px;
+    width: 350px;
+    text-align: center;
+    text-shadow: 2px 2px rgb(196, 12, 12);
+}
+
+.div2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    bottom:0px;
+   
+}
