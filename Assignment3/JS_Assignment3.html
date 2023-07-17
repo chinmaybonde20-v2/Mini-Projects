@@ -1,0 +1,90 @@
+<!-- JAVASCRIPT_ASSIGNMENT-3__CHINMAY_BONDE -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Assignment3</title>
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align: center;">JAVASCRIPT_ASSIGNMENT - 3</h1>
+        <p style="text-align: center;">~ Chinmay Bonde</p>
+    </div>
+    <hr>
+
+    <div>
+
+        <h3 style="text-align: center;">FORM WITH VALIDATION</h3>
+    </div>
+    <div>
+        <form name="myForm" action="/action_page.php" onsubmit="Validation()" method="post">
+            <fieldset>
+                <legend>Personal Details</legend>
+                <table cellspacing="15">
+
+                    <!-- Enter Name -->
+                    <tr>
+                        <td><label for="aplname">Applicants Full Name</label></td>
+                        <td><select name="title" id="title">
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                            </select>
+                            <input type="text" id="inputName" placeholder="Enter your name" required><br><br>
+                        </td>
+                    </tr>
+
+                    <!-- Gender -->
+                    <tr>
+                        <td> <label for="gender">Gender</label></td>
+                        <td> <input type="radio" name="gender" value="male"> Male
+                            <input type="radio" name="gender" value="female"> Female
+                            <input type="radio" name="gender" value="female"> Others <br><br>
+                        </td>
+                    </tr>
+
+                    <!-- Gender -->
+                    <tr>
+                        <td> <label for="DOB">Date of Birth</label></td>
+                        <td><input type="date" id="birthday" name="birthday"> <br><br>
+                        </td>
+                    </tr>
+
+                    <!-- Mobile No. -->
+                    <tr>
+                        <td><label for="phone">Mobile Number</label></td>
+                        <td><input type="text" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="+91 xxxxx xxxxx"><br><br>
+                        </td>
+                    </tr>
+
+                    <!-- Email -->
+                    <tr>
+                        <td> <label for="email">Email ID</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="@gmail.com"> <br><br>
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+            <br>
+
+            <div style="text-align: center;">
+
+                <button onclick="Validation()">Submit</button>
+                <button onclick="history.back()">Back</button>
+                <input type="reset">
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Script -->
+    <script src="myJS3.js"></script>
+    <!-- Script -->
+</body>
+
+</html>
