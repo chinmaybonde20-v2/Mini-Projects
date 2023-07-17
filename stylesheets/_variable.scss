@@ -1,0 +1,95 @@
+//____________Viewport Resolution____________
+
+// Extra_Large_Device-xxl (More than/= 1400px)
+$x-large-view: '(min-width: 1400px)';
+
+// Large_Device-xl (1201px-1399px)
+$large-view: '(max-width: 1399px)';
+
+// Desktop-lg (993px-1200px)
+$desktop-view: '(max-width: 1200px)';
+
+// Laptop-md (769px-992px)
+$laptop-view: '(max-width: 992px)';
+
+// Tablet-sm (576px-768px)
+$tablet-view: '(max-width: 768px)';
+
+// Mobile-xs (less than/=575px)
+$mobile-view: '(max-width: 575px)';
+
+
+
+//____________colors____________
+
+// navbar
+$gray:#c5c9cc;
+// 3cards
+$pink:#ff487c;
+$lite-gray:#f3f2f7;
+// who we are
+$dark-gray:#252c3c;
+// milestone numbers
+$green:#9ad647;
+$grn-blue:#00be9f;
+$orange:#fa7f41;
+// text
+$white:#fcf9f7;
+$txt-gray:#c1bcbd;
+$f-blue:#202833;
+$d-gray:#858286;
+$l-red:rgb(200, 7, 7);
+$bldgray:#D8D8D8;
+// button
+$black:black;
+// test
+$tr-b:blue;
+$tr-g:green;
+$tr-r:red;
+$tr-o:orange;
+
+//font size
+$f-54:54px;
+$f-48:48px;
+$f-36:36px;
+$f-33:33px;
+$f-21:21px;
+$f-16:17px;
+$f-12:12px;
+$f-10:10px;
+
+
+// font weight
+$fw-reg:400;
+$fw-med:500;
+$fw-lag:900;
+
+// s
+
+//colors
+$d-black:#25272f;
+$d-grey:#bdc6c9;
+$l-grey:#f3f2f7;
+$d-pink:#ff487c;
+$d-blue:#202833;
+$green:#a3cf6c;
+$l-blue:#00be9f;
+$orange:#e98659;
+$deep-grey:#848d94;
+$l-red:red;
+$white:white;
+$silver:#D8D8D8;
+
+//window size
+$vs-up: '(min-width: 420px)';
+$xs-up: '(min-width: 576px)';
+$sm-up: '(min-width: 768px)';
+$md-up: '(min-width: 992px)';
+$lg-up: '(min-width: 1200px)';
+$xl-up: '(min-width: 1500px)';
+$xl-down: '(max-width: 1499px)';
+$lg-down: '(max-width: 1199px)';
+$md-down: '(max-width: 991px)';
+$sm-down: '(max-width: 767px)';
+$xs-down: '(max-width: 575px)';
+$vs-down: '(max-width: 419px)';
